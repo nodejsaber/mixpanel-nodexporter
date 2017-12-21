@@ -1,0 +1,54 @@
+{
+  "name": "mixpanel-nodexporter",
+  "version": "1.0.0",
+  "description": "Simple and lightweight javascript library for export data from Mixpanel",
+  "keywords": [
+    "mixpanel",
+    "api",
+    "export",
+    "data",
+    "analytics",
+    "javascript"
+  ],
+  "homepage": "https://github.com/nodejsaber/mixpanel-nodexporter",
+  "bugs": {
+    "url": "https://github.com/nodejsaber/mixpanel-nodexporter/issues"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodejsaber/mixpanel-nodexporter.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Nodejsaber",
+    "email": "winglonelion@gmail.com",
+    "url": "https://github.com/nodejsaber"
+  },
+  "contributors": [
+    {
+      "name": "Wing Lonelion",
+      "email": "winglonelion@gmail.com",
+      "url": "https://www.npmjs.com/~winglonelion"
+    }
+  ],
+  "dependencies": {
+    "needle": "^2.0.1",
+    "crypto": "1.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.2.0",
+    "mocha": "^3.4.1",
+    "supertest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  }
+}

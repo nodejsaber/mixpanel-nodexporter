@@ -1,0 +1,69 @@
+{
+    "env": {
+        "commonjs": true,
+        "es6": true,
+        "node": true,
+        "mocha": true,
+        "serviceworker": true
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-const-assign": "warn",
+        "no-this-before-super": "warn",
+        "no-undef": "warn",
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "constructor-super": "warn",
+        "no-extra-semi": "error",
+        "valid-typeof": "warn",
+        "no-nested-ternary": "error",
+        "curly": "warn",
+        "no-console": "warn",
+        "no-useless-escape": "warn",
+        "no-underscore-dangle": "off",
+        "no-restricted-syntax": "off",
+        "no-prototype-builtins": "off",
+        "no-param-reassign": "off",
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "always-multiline",
+                "objects": "always-multiline",
+                "imports": "always-multiline",
+                "exports": "always-multiline",
+                "functions": "ignore"
+            }
+        ],
+        "no-mixed-operators": [
+            "warn"
+        ],
+        "max-len": [
+            "warn",
+            150
+        ],
+        "no-multiple-empty-lines": [
+            "warn"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "semi": [
+            "warn",
+            "never"
+        ],
+        "consistent-return": "off",
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true,
+                "optionalDependencies": true,
+                "peerDependencies": false
+            }
+        ],
+        "import/no-unresolved": "warn"
+    },
+    "extends": "airbnb"
+}
