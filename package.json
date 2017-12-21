@@ -1,14 +1,14 @@
 {
   "name": "mixpanel-nodexporter",
   "version": "1.0.0",
-  "description": "Simple and lightweight javascript library for export data from Mixpanel",
+  "description": "Simple and lightweight nodejs library for export data from Mixpanel",
   "keywords": [
     "mixpanel",
     "api",
     "export",
     "data",
     "analytics",
-    "javascript"
+    "nodejs"
   ],
   "homepage": "https://github.com/nodejsaber/mixpanel-nodexporter",
   "bugs": {
