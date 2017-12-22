@@ -150,7 +150,7 @@ MixpanelExport.prototype._parseResponse = function ___parseResponse(method, para
 
 MixpanelExport.prototype._buildRequestURL = function __buildRequestURL(method, parameters) {
   const apiStub = (method === 'export') ? 'https://data.mixpanel.com/api/2.0/' : 'https://mixpanel.com/api/2.0/'
-  return `${apiStub}${typeof method.join === 'function' ? method.join('/') : ''}/?${this._requestParameterString(parameters)}`
+  return `${apiStub}${typeof method.join === 'function' ? method.join('/') : method}/?${this._requestParameterString(parameters)}`
 }
 
 
@@ -163,13 +163,14 @@ MixpanelExport.prototype._requestParameterString = function __requestParameterSt
   const keys = Object.keys(connectionParams).sort()
 
   // calculate sig only for deprecated key+secret auth
-  let sig = ''
-  if (this.api_key) {
-    const sigKeys = keys.filter(key => key !== 'callback')
-    sig = `&sig=${this._getSignature(sigKeys, connectionParams)}`
-  }
+  // let sig = ''
+  // if (this.api_key) {
+  //   const sigKeys = keys.filter(key => key !== 'callback')
+  //   sig = `&sig=${this._getSignature(sigKeys, connectionParams)}`
+  // }
 
-  return this._getParameterString(keys, connectionParams) + sig
+
+  return this._getParameterString(keys, connectionParams)
 }
 
 MixpanelExport.prototype._getParameterString = function __getParameterString(keys, connectionParams) {
@@ -183,6 +184,7 @@ MixpanelExport.prototype._getSignature = function __getSignature(keys, connectio
 }
 
 MixpanelExport.prototype._urlEncode = function __urlEncode(param) {
+
   return encodeURIComponent(this._stringifyIfArray(param))
 }
 
@@ -190,7 +192,6 @@ MixpanelExport.prototype._stringifyIfArray = function __stringifyIfArray(array) 
   if (!Array.isArray(array)) {
     return array
   }
-
   return JSON.stringify(array)
 }
 
