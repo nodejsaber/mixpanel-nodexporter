@@ -158,7 +158,7 @@ MixpanelExport.prototype._requestParameterString = function __requestParameterSt
   const connectionParams = Object.assign({}, args)
   if (this.api_key) {
     // connectionParams.api_key = this.api_key
-    connectionParams.expire = this._expireAt()
+    // connectionParams.expire = this._expireAt()
   }
   const keys = Object.keys(connectionParams).sort()
 
